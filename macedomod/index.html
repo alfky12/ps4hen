@@ -954,7 +954,7 @@ chain.fcall(window.syscalls[6], kqueues[i]);
 chain.run();
 
 //Trigger OOB
-alert("\n\nHampir siap! Sekarang ikuti langkah-langkah di bawah ini untuk menyelesaikan Jailbreak:\n\n1. Masukkan USB exfathax. \n2. Tunggu hingga notifikasi USB tidak didukung muncul dan MENGHILANG, lalu tekan OK.");
+alert("\n\nMemulai Jailbreak! Ikuti langkah-langkah di bawah ini:\n\n1. Masukkan USB exfathax. \n2. Tunggu pemberitahuan USB tidak didukung muncul dan MENGHILANG, lalu tekan OK.");
 //Trigger corrupt knote
 {
 for (var i = 1; i < NUM_KQUEUES; i += 2) {
@@ -983,12 +983,12 @@ chain.fcall(window.syscalls[203], patch_buffer, 0x4000);
 chain.fcall(patch_buffer, p.read8(KERNEL_BASE_PTR));
 chain.fcall(window.syscalls[73], patch_buffer, 0x4000);
 chain.run();
-alert("\n\n\nUntuk menghindari kesalahan, lepaskan USB sekarang dan tekan OK.");
+alert("\n\n\nLepaskan USB sekarang dan tekan OK.");
 setTimeout(jbdone, 1000);
 }
 else
 {
-alert("Jailbreak GAGAL! Tutup browser dan ulangi SELURUH PROSES,\ntermasuk menghapus cookie dan data situs web.\n\nCatatan:\nHanya sambungkan USB saat diminta.\nPeriksa apakah USB tersambung dengan benar, kemungkinan lainnya,\nmungkin USB rusak, ganti dan tulis ulang file exfathax.");
+alert("Jailbreak GAGAL! Tutup browser dan ulangi SELURUH PROSES,\ntermasuk menghapus cookie dan data situs web.\n\nCatatan:\nHanya sambungkan USB saat diminta.\nPeriksa apakah USB tersambung dengan benar,\natau mungkin USB rusak, ganti dan tulis ulang file exfathax.");
 p.write8(0, 0);
 }
 }
