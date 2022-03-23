@@ -3,7 +3,7 @@ var payload;
 function loadPayload(pl){
 	sessionStorage.Queue = pl;
 	progress.innerHTML="Loading "+pl+".. Please Wait !!";
-	setTimeout(poc, 1500);
+	setTimeout(poc, 5000);
 }
 
 function executependingqueue(pl){
