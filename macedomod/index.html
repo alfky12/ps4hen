@@ -61,7 +61,7 @@ window.progress.innerHTML= LoadedMSG
 
 function goldhen21(){
 progress.innerHTML="Memuat GoldHEN... <font color=\"#ee596f\">Harap tunggu!</font>";
-LoadedMSG="<font style='color:#6089f6; text-shadow: 5px 5px 5px #ff5757;'><b>S&nbsp;E&nbsp;L&nbsp;A&nbsp;M&nbsp;A&nbsp;T&nbsp;&nbsp;B&nbsp;E&nbsp;R&nbsp;M&nbsp;A&nbsp;I&nbsp;N&nbsp;!</b></font>";
+LoadedMSG="<font style='color:#6089f6; text-shadow: 5px 5px 5px #ff5757;'><b>S&nbsp;E&nbsp;L&nbsp;A&nbsp;M&nbsp;A&nbsp;T&nbsp;&nbsp;B&nbsp;E&nbsp;R&nbsp;M&nbsp;A&nbsp;I&nbsp;N&nbsp;!<br>Jangan Lupa Cabut USB!</b></font>";
 PLfile = "hen.bin";
 setTimeout(loadBIN,1000);
 }
@@ -615,7 +615,7 @@ chain = new rop();
 
 //Sanity check
 if (chain.syscall(20).low == 0) {
-alert("WebKit exploit failed. Try again if your ps4 is on fw 9.00.");
+alert("WebKit exploit Gagal. Coba Lagi Atau Reboot Dahulu.");
 while (1);
 }
 }
@@ -983,7 +983,6 @@ chain.fcall(window.syscalls[203], patch_buffer, 0x4000);
 chain.fcall(patch_buffer, p.read8(KERNEL_BASE_PTR));
 chain.fcall(window.syscalls[73], patch_buffer, 0x4000);
 chain.run();
-alert("\n\n\nLepaskan USB sekarang dan tekan OK.");
 setTimeout(jbdone, 1000);
 }
 else
