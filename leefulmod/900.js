@@ -39,7 +39,7 @@ function EndTimer(){EndTime=Date.now();CalcTime(EndTime=Date.now()-StartTime);to
 
 function allset(){
  localStorage.HenLoaded="yes";sessionStorage.HenLoaded="yes";
- msgs.innerHTML="PS4 Exploited And GoldHEN v2.2 Loaded";
+ msgs.innerHTML="PS4 Exploited And GoldHEN Loaded";
 }
 
 function awaitpl() {
